@@ -4,59 +4,196 @@
             <div class="col-md-12">
                 <nav>
                     <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
-                        <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">
-                            10 Happiest Songs <i class="far fa-smile"></i></a>
-                        <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">
-                            10 Saddest Songs <i class="far fa-frown"></i></a>
+                        <a class="nav-item nav-link active" id="nav-song-tab" data-toggle="tab" href="#nav-song" role="tab" aria-controls="nav-song" aria-selected="true">
+                            Songs <i class="fas fa-music"></i></a>
+                        <a class="nav-item nav-link" id="nav-artists-tab" data-toggle="tab" href="#nav-artists" role="tab" aria-controls="nav-artists" aria-selected="true">
+                            Artists <i class="far fa-star"></i></a>
+                        <a class="nav-item nav-link" id="nav-genre-tab" data-toggle="tab" href="#nav-genre" role="tab" aria-controls="nav-genre" aria-selected="false">
+                            Genres <i class="fas fa-icons"></i></a>
                     </div>
                 </nav>
                 <div class="tab-content" id="nav-tabContent">
-                    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-                        <table class="table" cellspacing="0">
-                                <thead>
-                                    <tr>
-                                        <th>Rank</th>
-                                        <th>Artist</th>
-                                        <th>Song</th>
-                                        <th>Happiness Average</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr><td>1</td><td>Massive Attack</td><td>Angel by Massive Attack</td><td>7.713015873015873</td></tr>
-                                    <tr><td>2</td><td>London Symphony Orchestra</td><td>The End by London Symphony Orchestra</td><td>7.687027027027027</td></tr>
-                                    <tr><td>3</td><td>C2C</td><td>Arcades by C2C</td><td>7.477818181818185</td></tr>
-                                    <tr><td>4</td><td>Lisa Gerrard</td><td>Space Weaver by Lisa Gerrard</td><td>7.373333333333335</td></tr>
-                                    <tr><td>5</td><td>Sigala</td><td>Give Me Your Love by Sigala (Ft. John Newman & Nile Rodgers)</td><td>7.295079365079365</td></tr>
-                                    <tr><td>6</td><td>The Yardbirds</td><td>For Your Love by The Yardbirds</td><td>7.246666666666666</td></tr>
-                                    <tr><td>7</td><td>Jamie xx</td><td>Girl by Jamie xx</td><td>7.209939393939394</td></tr>
-                                    <tr><td>8</td><td>Shiloh Dynasty</td><td>Would That Make You Love Me? by Shiloh Dynasty</td><td>7.189473684210527</td></tr>
-                                    <tr><td>9</td><td>Crush</td><td>Beautiful by Crush</td><td>7.137043010752687</td></tr>
-                                    <tr><td>10</td><td>Dexys Midnight Runners</td><td>Because of You by Dexys Midnight Runners</td><td>7.118181818181818</td></tr>
-                                </tbody>
-                        </table>
+                    <!-- song table -->
+                    <div class="tab-pane fade show active" id="nav-song" role="tabpanel" aria-labelledby="nav-song-tab">
+                        <nav>
+                            <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                                <a class="nav-item nav-link active" id="nav-song-happy-tab" data-toggle="tab" href="#nav-song-happy" role="tab" aria-controls="nav-song-happy" aria-selected="true">
+                                    Happy <i class="far fa-smile"></i></a>
+                                <a class="nav-item nav-link" id="nav-song-sad-tab" data-toggle="tab" href="#nav-song-sad" role="tab" aria-controls="nav-song-sad" aria-selected="false">
+                                    Sad <i class="far fa-frown"></i></a>
+                            </div>
+                        </nav>
+                        <div class="tab-content" id="nav-tabContent">
+                            <div class="tab-pane fade show active" id="nav-song-happy" role="tabpanel" aria-labelledby="nav-song-happy-tab">
+                                <table class="table" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>Rank</th>
+                                            <th>Artist</th>
+                                            <th>Song</th>
+                                            <th>Happiness Average</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td>1</td><td>Jamie xx</td><td>Girl</td><td>7.209939394</td></tr>
+                                        <tr><td>2</td><td>Crush</td><td>Beautiful</td><td>7.125265957</td></tr>
+                                        <tr><td>3</td><td>Stevie Wonder</td><td>Happy Birthday</td><td>6.961181818</td></tr>
+                                        <tr><td>4</td><td>Elvis Presley</td><td>Love Me Tender</td><td>6.861481481</td></tr>
+                                        <tr><td>5</td><td>Joe Cocker</td><td>You Are So Beautiful</td><td>6.815806452</td></tr>
+                                        <tr><td>6</td><td>Whitney Houston</td><td>I Will Always Love You</td><td>6.809814815</td></tr>
+                                        <tr><td>7</td><td>Majid Jordan</td><td>My Love</td><td>6.745568182</td></tr>
+                                        <tr><td>8</td><td>Franz Ferdinand</td><td>Love Illumination</td><td>6.717638889</td></tr>
+                                        <tr><td>9</td><td>Bing Crosby</td><td>Mele Kalikimaka</td><td>6.715851064</td></tr>
+                                        <tr><td>10</td><td>Cat Power</td><td>Sea of Love</td><td>6.682222222</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="tab-pane fade" id="nav-song-sad" role="tabpanel" aria-labelledby="nav-song-sad-tab">
+                                <table class="table" cellspacing="0">
+                                        <thead>
+                                            <tr>
+                                                <th>Rank</th>
+                                                <th>Artist</th>
+                                                <th>Song</th>
+                                                <th>Happiness Average</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr><td>1</td><td>TheFatRat</td><td>Never Be Alone</td><td>3.848985507</td></tr>
+                                            <tr><td>2</td><td>Eric Clapton</td><td>Cocaine</td><td>3.995319149</td></tr>
+                                            <tr><td>3</td><td>Jon Bellion</td><td>All Time Low</td><td>4.029105058</td></tr>
+                                            <tr><td>4</td><td>French Montana</td><td>Ain't Worried About Nothin'</td><td>4.066451613</td></tr>
+                                            <tr><td>5</td><td>Rammstein</td><td>Du hast (English Version)</td><td>4.146666667</td></tr>
+                                            <tr><td>6</td><td>League of Legends</td><td>Legends Never Die (Alan Walker Remix)</td><td>4.168653846</td></tr>
+                                            <tr><td>7</td><td>21 Savage</td><td>Red Opps</td><td>4.183977273</td></tr>
+                                            <tr><td>8</td><td>Korn</td><td>Falling Away from Me</td><td>4.211287129</td></tr>
+                                            <tr><td>9</td><td>The Prodigy</td><td>Firestarter</td><td>4.221666667</td></tr>
+                                            <tr><td>10</td><td>Marilyn Manson</td><td>WE ARE CHAOS</td><td>4.252528736</td></tr>
+                                        </tbody>
+                                </table>
+                            
+                            
+                            
+                            </div>
+                        </div>
                     </div>
-                    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-                        <table class="table" cellspacing="0">
-                            <thead>
-                                <tr>
-                                    <th>Rank</th>
-                                    <th>Artist</th>
-                                    <th>Song</th>
-                                    <th>Happiness Average</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr><td>1</td><td>Massive Attack</td><td>Angel by Massive Attack</td><td>7.713015873015873</td></tr>
-                                <tr><td>2</td><td>London Symphony Orchestra</td><td>The End by London Symphony Orchestra</td><td>7.687027027027027</td></tr>
-                                <tr><td>3</td><td>C2C</td><td>Arcades by C2C</td><td>7.477818181818185</td></tr>
-                                <tr><td>4</td><td>Lisa Gerrard</td><td>Space Weaver by Lisa Gerrard</td><td>7.373333333333335</td></tr>
-                                <tr><td>5</td><td>Sigala</td><td>Give Me Your Love by Sigala (Ft. John Newman & Nile Rodgers)</td><td>7.295079365079365</td></tr>
-                                <tr><td>6</td><td>The Yardbirds</td><td>For Your Love by The Yardbirds</td><td>7.246666666666666</td></tr>
-                                <tr><td>7</td><td>Jamie xx</td><td>Girl by Jamie xx</td><td>7.209939393939394</td></tr>
-                                <tr><td>8</td><td>Shiloh Dynasty</td><td>Would That Make You Love Me? by Shiloh Dynasty</td><td>7.189473684210527</td></tr>
-                                <tr><td>9</td><td>Crush</td><td>Beautiful by Crush</td><td>7.137043010752687</td></tr>
-                                <tr><td>10</td><td>Dexys Midnight Runners</td><td>Because of You by Dexys Midnight Runners</td><td>7.118181818181818</td></tr>
-                        </table>
+                    <!-- artists table-->
+                    <div class="tab-pane fade" id="nav-artists" role="tabpanel" aria-labelledby="nav-artists-tab">
+                        <nav>
+                            <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                                <a class="nav-item nav-link active" id="nav-artists-happy-tab" data-toggle="tab" href="#nav-artists-happy" role="tab" aria-controls="nav-artists-happy" aria-selected="true">
+                                    Happy <i class="far fa-smile"></i></a>
+                                <a class="nav-item nav-link" id="nav-artists-sad-tab" data-toggle="tab" href="#nav-artists-sad" role="tab" aria-controls="nav-artists-sad" aria-selected="false">
+                                    Sad <i class="far fa-frown"></i></a>
+                            </div>
+                        </nav>
+                        <div class="tab-content" id="nav-tabContent">
+                            <div class="tab-pane fade show active" id="nav-artists-happy" role="tabpanel" aria-labelledby="nav-artists-happy-tab">
+                                <table class="table" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>Rank</th>
+                                            <th>Artist</th>
+                                            <th>Happiness Average</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td>1</td><td>Bing Crosby</td><td>6.246102722</td></tr>
+                                        <tr><td>2</td><td>Joe Cocker</td><td>6.227960138</td></tr>
+                                        <tr><td>3</td><td>Chris Tomlin</td><td>6.172873524</td></tr>
+                                        <tr><td>4</td><td>Anita Baker</td><td>6.162297594</td></tr>
+                                        <tr><td>5</td><td>Carpenters</td><td>6.122967081</td></tr>
+                                        <tr><td>6</td><td>Louis Armstrong</td><td>6.118175466</td></tr>
+                                        <tr><td>7</td><td>Mandy Moore</td><td>6.103971713</td></tr>
+                                        <tr><td>8</td><td>Hillsong Worship</td><td>6.099452653</td></tr>
+                                        <tr><td>9</td><td>Echosmith</td><td>6.089368264</td></tr>
+                                        <tr><td>10</td><td>Planetshakers</td><td>6.088437117</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="tab-pane fade" id="nav-artists-sad" role="tabpanel" aria-labelledby="nav-artists-sad-tab">
+                                <table class="table" cellspacing="0">
+                                        <thead>
+                                            <tr>
+                                                <th>Rank</th>
+                                                <th>Artist</th>
+                                                <th>Happiness Average</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr><td>1</td><td>Rammstein</td><td>4.146666667</td></tr>
+                                            <tr><td>2</td><td>Static-X</td><td>4.657090909</td></tr>
+                                            <tr><td>3</td><td>2Scratch</td><td>4.69076087</td></tr>
+                                            <tr><td>4</td><td>In Flames</td><td>4.702489474</td></tr>
+                                            <tr><td>5</td><td>As I Lay Dying</td><td>4.731564626</td></tr>
+                                            <tr><td>6</td><td>Rick Astley</td><td>4.744722222</td></tr>
+                                            <tr><td>7</td><td>LUM!X</td><td>4.759047619</td></tr>
+                                            <tr><td>8</td><td>Doe Boy</td><td>4.785229682</td></tr>
+                                            <tr><td>9</td><td>Jasiah</td><td>4.807681088</td></tr>
+                                            <tr><td>10</td><td>FSK SATELLITE</td><td>4.827553648</td></tr>
+                                        </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- genres table-->
+                    <div class="tab-pane fade" id="nav-genre" role="tabpanel" aria-labelledby="nav-genre-tab">
+                        <nav>
+                            <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                                <a class="nav-item nav-link active" id="nav-gerne-happy-tab" data-toggle="tab" href="#nav-gerne-happy" role="tab" aria-controls="nav-gerne-happy" aria-selected="true">
+                                    Happy <i class="far fa-smile"></i></a>
+                                <a class="nav-item nav-link" id="nav-genre-sad-tab" data-toggle="tab" href="#nav-genre-sad" role="tab" aria-controls="nav-genre-sad" aria-selected="false">
+                                    Sad <i class="far fa-frown"></i></a>
+                            </div>
+                        </nav>
+                        <div class="tab-content" id="nav-tabContent">
+                            <div class="tab-pane fade show active" id="nav-gerne-happy" role="tabpanel" aria-labelledby="nav-gerne-happy-tab">
+                                <table class="table" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>Rank</th>
+                                            <th>Genre</th>
+                                            <th>Happiness Average</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td>1</td><td>ccm</td><td>5.833207411</td></tr>
+                                        <tr><td>2</td><td>funk</td><td>5.815643308</td></tr>
+                                        <tr><td>3</td><td>contemporary country</td><td>5.662243453</td></tr>
+                                        <tr><td>4</td><td>dance pop</td><td>5.605304358</td></tr>
+                                        <tr><td>5</td><td>indie folk</td><td>5.575999514</td></tr>
+                                        <tr><td>6</td><td>pop</td><td>5.562552084</td></tr>
+                                        <tr><td>7</td><td>rock</td><td>5.562081709</td></tr>
+                                        <tr><td>8</td><td>pop rock</td><td>5.547535673</td></tr>
+                                        <tr><td>9</td><td>pop rap</td><td>5.518407</td></tr>
+                                        <tr><td>10</td><td>uk hip hop</td><td>5.470727097</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="tab-pane fade" id="nav-genre-sad" role="tabpanel" aria-labelledby="nav-genre-sad-tab">
+                                <table class="table" cellspacing="0">
+                                        <thead>
+                                            <tr>
+                                                <th>Rank</th>
+                                                <th>Genre</th>
+                                                <th>Happiness Average</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr><td>1</td><td>underground hip hop</td><td>5.235002128</td></tr>
+                                            <tr><td>2</td><td>trap</td><td>5.263946038</td></tr>
+                                            <tr><td>3</td><td>alternative metal</td><td>5.287064133</td></tr>
+                                            <tr><td>4</td><td>rap</td><td>5.3828454</td></tr>
+                                            <tr><td>5</td><td>hip hop</td><td>5.409483454</td></tr>
+                                            <tr><td>6</td><td>pop punk</td><td>5.453246691</td></tr>
+                                            <tr><td>7</td><td>modern rock</td><td>5.468761196</td></tr>
+                                            <tr><td>8</td><td>uk hip hop</td><td>5.470727097</td></tr>
+                                            <tr><td>9</td><td>pop rap</td><td>5.518407</td></tr>
+                                            <tr><td>10</td><td>pop rock</td><td>5.547535673</td></tr>
+                                        </tbody>
+                                </table>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
