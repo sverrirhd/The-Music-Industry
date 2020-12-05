@@ -143,6 +143,10 @@ padding-top: 18px;
 font-weight:bold;
 }
 
+#attributepane .data {
+
+}
+
 #attributepane .data .plus {
 background-repeat: no-repeat;
 background-image: url('../images/sprite.png');
@@ -393,6 +397,9 @@ height: 20px;
 float: left;
 background-repeat: no-repeat;
 background-image: url('../images/sprite.png');
+}
+
+#legend dl {
 }
 
 #mainpanel h2 {
