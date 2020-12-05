@@ -369,23 +369,45 @@
                     <div class="divider-custom-icon"><i class="fab fa-spotify"></i></div>
                     <div class="divider-custom-line"></div>
                 </div>
-                <!-- genres-themes Section Content-->
                 <div class="row">
-                    <div class="col-lg-4 ml-auto"><p class="lead">Then we’ll perform a sentimental analysis. We’ll compare sentiment based on artists, genres and communities in the network. </p></div>
-                    <div class="col-lg-4 mr-auto"><p class="lead">Then we’ll perform a sentimental analysis. We’ll compare sentiment based on artists, genres and communities in the network. </p></div>
-                </div>
-
-                <div class="row">
-                    <div class="col-6 m-auto">
-                        <img src="./assets/img/wordclouds/CCM.png">
-                    </div>
-                    <div class="col-6 m-auto">
-                        <img src="./assets/img/wordclouds/Underground hip hop.png">
+                    <div class="col-10 m-auto">
+                        <p class="lead">
+                            Before we dive into the text analysis let’s quickly stop to think about a metric called TF-IDF. TF-IDF stands for term frequency-inverse document frequency and is a metric for the <b>relative importance of a word in a given song</b>. It considers how many times the word appears in the given song (term frequency) as well as how many other songs the word appears in (document frequency). The more common the word, the less important it is, the more often the word appears, the more important it is. 
+                        </p>
                     </div>
                 </div>
-
-
-                <!-- genres-themes section wordclouds-->
+                <div class="row">
+                    <div class="col-10 m-auto">
+                        <p class="lead">
+                            For this section, we first computed the TF-IDF for each word in every single one of our >10.000 songs. Then, because we don’t want longer songs to count more than shorter songs, we give each song a combined weight of 1.                         
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-10 m-auto">
+                        <p class="lead">
+                            Having seen the difference between some genres from the sentimental analysis, we want to show what’s actually behind the difference in these numbers. For this calculate the average TF-IDF value for each genre and then create word clouds where the size of the words is proportional to the weight of the given word. Let’s first look at the separate extremes of the sentiment spectrum: contemporary Christian music (ccm) and underground hip hop.                        </p>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-6 m-auto">
+                        <img src="./assets/img/wordclouds/happy.svg">
+                    </div>
+                    <div class="col-6 m-auto">
+                        <img src="./assets/img/wordclouds/sad.svg">
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-10 m-auto">
+                        <p class="lead">
+                            The word clouds definitely tell a story. The ccm word cloud is filled with religious words and the underground hip hop word cloud is filled with curse words and derogatory terms. However, most genres are probably not as extreme as these two cases. Let’s look at 10 dissimilar genres from the top 25 most popular ones and try to see if the themes make sense.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- topic extraction wordclouts-->
                 <div class="row">
                     <div class="col-lg-6 m-auto">
                         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="false">
@@ -402,63 +424,63 @@
                             </ol>
                             <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img class="d-block w-100" src="assets/img/wordclouds/pop.png" alt="Third slide">
+                                <img class="d-block w-100" src="assets/img/wordclouds/pop.svg" alt="Third slide">
                                 <div class="carousel-caption d-none d-md-block text-secondary">
                                     <h5>Country Music</h5>
                                     <p>Country music word cloud!</p>
                                 </div>
                             </div>
                             <div class="carousel-item">
-                                <img class="d-block w-100" src="assets/img/wordclouds/rap.png" alt="Third slide">
+                                <img class="d-block w-100" src="assets/img/wordclouds/rap.svg" alt="Third slide">
                                 <div class="carousel-caption d-none d-md-block text-secondary">
                                     <h5>Country Music</h5>
                                     <p>Country music word cloud!</p>
                                 </div>
                             </div>
                             <div class="carousel-item">
-                                <img class="d-block w-100" src="assets/img/wordclouds/rock.png" alt="Third slide">
+                                <img class="d-block w-100" src="assets/img/wordclouds/rock.svg" alt="Third slide">
                                 <div class="carousel-caption d-none d-md-block text-secondary">
                                     <h5>Country Music</h5>
                                     <p>Country music word cloud!</p>
                                 </div>
                             </div>
                             <div class="carousel-item">
-                                <img class="d-block w-100" src="assets/img/wordclouds/country rock.png" alt="First slide">
+                                <img class="d-block w-100" src="assets/img/wordclouds/country rock.svg" alt="First slide">
                                 <div class="carousel-caption d-none d-md-block text-secondary">
                                     <h5>Country Music</h5>
                                     <p>Country music word cloud!</p>
                                 </div>
                             </div>
                             <div class="carousel-item">
-                                <img class="d-block w-100" src="assets/img/wordclouds/electro house.png" alt="Second slide">
+                                <img class="d-block w-100" src="assets/img/wordclouds/electro house.svg" alt="Second slide">
                                 <div class="carousel-caption d-none d-md-block text-secondary">
                                     <h5>Country Music</h5>
                                     <p>Country music word cloud!</p>
                                 </div>
                             </div>
                             <div class="carousel-item">
-                                <img class="d-block w-100" src="assets/img/wordclouds/funk.png" alt="Third slide">
+                                <img class="d-block w-100" src="assets/img/wordclouds/funk.svg" alt="Third slide">
                                 <div class="carousel-caption d-none d-md-block text-secondary">
                                     <h5>Country Music</h5>
                                     <p>Country music word cloud!</p>
                                 </div>
                             </div>
                             <div class="carousel-item">
-                                <img class="d-block w-100" src="assets/img/wordclouds/hip hop.png" alt="Third slide">
+                                <img class="d-block w-100" src="assets/img/wordclouds/hip hop.svg" alt="Third slide">
                                 <div class="carousel-caption d-none d-md-block text-secondary">
                                     <h5>Country Music</h5>
                                     <p>Country music word cloud!</p>
                                 </div>
                             </div>
                             <div class="carousel-item">
-                                <img class="d-block w-100" src="assets/img/wordclouds/indie rock.png" alt="Third slide">
+                                <img class="d-block w-100" src="assets/img/wordclouds/indie rock.svg" alt="Third slide">
                                 <div class="carousel-caption d-none d-md-block text-secondary">
                                     <h5>Country Music</h5>
                                     <p>Country music word cloud!</p>
                                 </div>
                             </div>
                             <div class="carousel-item">
-                                <img class="d-block w-100" src="assets/img/wordclouds/modern rock.png" alt="Third slide">
+                                <img class="d-block w-100" src="assets/img/wordclouds/modern rock.svg" alt="Third slide">
                                 <div class="carousel-caption d-none d-md-block text-secondary">
                                     <h5>Country Music</h5>
                                     <p>Country music word cloud!</p>
@@ -474,6 +496,26 @@
                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                 <span class="sr-only">Next</span>
                                 </a>
+                    </div>
+                </div>
+
+                <div class="row mt-4">
+                    <div class="col-10 m-auto">
+                        <h3 class="text-uppercase text-secondary mt-4">Lyrics sentiment over time</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-10 m-auto">
+                        <p class="lead">
+                            Non-negative matrix factorization (NMF) is a method designed to extract patterns or ‘parts’ from high-dimensional data, such as the TF-IDF data we have here. These patterns should present themselves as exaggerated topics of songs. Examples of these might be a 'love song' topic or a 'nostalgic' topic. Such topics would be described as weights for each word. The higher the weights, the more likely the word is to be present in the topic. For the 'love song' topic, we might expect to see high weights for words such as 'love', 'miss', and 'need' since these are common in such songs.
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-10 m-auto">
+                        <p class="lead">
+                            We're going to try to extract some themes from the TF-IDF data frame and then select a few reasonable topics from and create some word clouds to see if they seem reasonable or familiar.
+                        </p>
                     </div>
                 </div>
             </div>
