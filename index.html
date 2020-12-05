@@ -215,9 +215,15 @@
                 <div class="row">
                     <img src="./assets/img/networks/network-sentiment-coloring.svg">
                 </div>
+                <div class="row mt-4">
+                    <div class="col-10 m-auto">
+                        <p class="lead">
+                            It is interesting to analyze the two contrary clusters in the top left section. By zooming in it can be seen that one cluster includes a lot of blue rock/metal artists like Linkin Park and Slipknot while the red cluster contains old jazz/funk artists like Bill Withers and Louis Armstrong. 
+                    </div>
+                </div>
 
                 <!-- Sentiment Historgram-->
-                <div class="row mt-4">
+                <div class="row">
                     <div class="col-10 m-auto">
                         <p class="lead">
                             The network displays a lot of mixed clusters and somewhat “neutral” artists. To further understand why so many artists are “neutral”, let’s look at the distribution of the songs’ average happiness score. 
@@ -228,8 +234,54 @@
                     <img src="./assets/img/graphs/happiness_score_songs.svg"/>
                 </div>
 
+                <div class="row">
+                    <div class="col-10 m-auto">
+                        <h3 class="text-uppercase text-secondary mt-4">Top 10 Lists</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-10 m-auto">
+                        <p class="lead">
+                            The table includes the 10 happiest/saddest songs, artist and genres. Feel free to skim through it and check whether your favorite songs, artists or genres express intense emotions.
+                        </p>
+                    </div>
+                </div>
+                
                 <!-- Sentiment table-->
                 <div data-include="sentiment"></div>
+                
+                <!-- Lyrics sentiment over time-->                
+                <div class="row">
+                    <div class="col-10 m-auto">
+                        <h3 class="text-uppercase text-secondary mt-4">Lyrics sentiment over time</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-10 m-auto">
+                        <p class="lead">
+                            As seen in the table above, many of the happiest songs and artists are old-timers that were famous back in the 50s, 60s, or 70s. The music industry is constantly changing and evolving, and therefore, it is interesting to see the changes in music sentiments over the years. 
+                        </p>    
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-10 m-auto">
+                        <p class="lead">
+                            Have a look at the figure below. The blue dots represent the songs, from the year they were released and their average happiness score. The red line shows the yearly average happiness score.
+                        </p>    
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6 m-auto">
+                        <img src="./assets/img/graphs/sentiment-over-time.svg">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-10 m-auto">
+                        <p class="lead">
+                            Notice that the song lyrics have developed over the years. Nowadays, there are more extremes, that is, more songs contain very happy lyrics or very sad lyrics. Back in the day, the lyrics sentiment was more similar, with less noticeable positive or negative themes. 
+                        </p>    
+                    </div>
+                </div>
             </div>
         </section>
         <!-- genres-themes Section-->
@@ -258,10 +310,11 @@
                     </div>
                 </div>
 
+
                 <!-- genres-themes section wordclouds-->
                 <div class="row">
                     <div class="col-lg-6 m-auto">
-                        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="false">
                             <ol class="carousel-indicators">
                             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="indicator active"></li>
                             <li data-target="#carouselExampleIndicators" data-slide-to="1" class="indicator"></li>
@@ -405,20 +458,32 @@
 
 
             const songHappy = 
-            '<p>Here we can see songs by some music icons like Stevie Wonder, Elvis Presley, and Whitney Houston.</p>\
+            '<p>Here we can see songs by some music icons like <b>Stevie Wonder</b>, <b>Elvis Presley</b>, and <b>Whitney Houston</b>.</p>\
             <p> For example, the song “I will always love you” includes some of the highest-ranking happy words like happiness, love, and joy.</p>\
             <i>“I hope life treats you kind <br/> And I hope you have all you\'ve dreamed of <br/>And I wish you joy and happiness <br/>But above all this I wish you love” </i>';
             const songSad = 
             `<p>Here we can see a mix of different songs by various artists.</p>
-            <p>For example the song “Cocaine” by Eric Clapton includes a lot of sad words with a minority of happy words like bad, kick and cocaine.</p>
+            <p>For example the song “Cocaine” by <b>Eric Clapton</b> includes a lot of sad words with a minority of happy words like bad, kick and cocaine.</p>
             <i>“If you got bad news <br>
             You wanna kick them blues <br>
             Cocaine”</i>`;
-            const artistsHappy = 'Comment 3';
-            const artistsSad = 'Comment 4';
-            const genresHappy = 'Comment 5';
-            const genresSad = 'Comment 6';
-            var dp = new DOMParser();
+            const artistsHappy = `
+            <p>The happiest artists are a mixture of old-timers like <b>Neil Diamond, Carpenters</b> & <b>George Benson</b> and contemporary Christian music singers such as <b>Chris Tomlin</b> & <b>Hillsong Worship</b>. </p>
+            <p>The happiest artist, <b>AOA</b>, is a South Korean k-pop band. The English lyrics to their songs are shown translated on Genius.</p>
+            `;
+            const artistsSad = `
+            <p>There is a clear pattern here.</p>
+            <p> The saddest artists are either <b>young rappers</b> in their 20s like Jashia, YBN Nahmir, Freddie Dredd, and Sheck Wes or <b>heavy metal bands</b> such as Trivium, Machine Head, and Sepultura.</p>
+            `;
+            const genresHappy = `
+            <p>The happiest genres seem logical. The music belonging to the genres are usually “feel good” songs or songs that people like to dance to, for example, <b>electro house, dance-pop,</b> and <b>contemporary country</b>.</p>
+            <p>The happiest genre is <b>contemporary Christian music</b> which might not come as a surprise since many of those songs contain high rated happy words such as lord, Jesus, and holy.</p>
+            <p><b>Funk</b> is a danceable form of music with a mixture of soul, jazz, and rhythm and blues. The songs often have a good vibe.</p>
+            `;
+            const genresSad = `
+            <p>The sad genres are sensible. The genres are influenced by dark emotions and the music is often used to express a judgement. </p>
+            <p><b>Underground hip hop</b> is known for its socially conscious lyrics. <b>Trap</b> gets its name from a slang word that refers to a place where drugs are sold illegally.<b> Alternative metal</b> is driven by aggressive sounds and the lyrics are often progressive.</p>
+            `;
             
             $(document).on('click', '#nav-song-tab', () => {
                 
