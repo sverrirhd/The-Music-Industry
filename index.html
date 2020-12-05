@@ -168,25 +168,67 @@
                 <div class="row">
                     <div class="col-10 m-auto">
                         <p class="lead">
-                            Artists use their song lyrics to convey their message, feelings, and emotions. Songs are all about making the listeners feel what the artist feels, to enhance the way you experience music.
+                            Artists use their song lyrics to convey their message, feelings, and emotions. Songs are all about making the listeners feel what the artist feels, to enhance the way you experience music.                        
                         </p>
                     </div>
+                </div>
+                <div class="row">
                     <div class="col-10 m-auto">
                         <p class="lead">
-                            It is interesting to analyze how emotions are shown in song lyrics and detect which songs and artists convey more positive or negative emotions. Furthermore, explore the genres and detect whether some genres tend to be darker/sadder than others, e.g., is there an apparent difference in happiness between rap and pop?                        </p>
+                            It is interesting to analyze how emotions are shown in song lyrics and detect which songs and artists convey more positive or negative emotions. Furthermore, explore the genres and detect whether some genres tend to be darker/sadder than others, e.g., is there an apparent difference in happiness between rap and pop?
+                        </p>                            
                     </div>
+                </div>
+                <div class="row">     
                     <div class="col-10 m-auto">
                         <p class="lead">
-                            The LabMT wordlist is used to classify the tokenized words from 12,000 lyrics by 2,142 artists. The list includes common words and their average happiness score that can be applied to songs, artists, and genres.  
+                            The LabMT wordlist is used to classify the tokenized words from 12,000 English lyrics by 2,142 artists. The list includes common words and their average happiness score that can be applied to songs, artists, and genres.
                         </p>
+                    </div>
+                </div>
+                <div class="row">     
+                    <div class="col-10 m-auto">
+                        <p class="lead">
+                            The artists considered are only those who have 3 songs or more in the analyzed data. For many of the uncommon genres, the dataset only contains a few songs which are not considered sufficient to describe the whole genre. Therefore, the only genres examined are those that consist of 100 songs or more.
+                        </p>
+                    </div>
+                </div>
+                <div class="row">     
+                    <div class="col-10 m-auto">
+                        <p class="lead">
+                            The happiness average for each artist is found by calculating the mean of his songs’ happiness averages. Similarly, the genre happiness average is the mean of each genre’s artists’ happiness averages.
+                        </p>
+                    </div>
+                </div>
+                <!-- Sentiment network section-->
+                <div class="row">
+                    <div class="col-10 m-auto">
+                        <h3 class="text-uppercase text-secondary mt-4">Sentiment Network</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-10 m-auto">
+                        <p class="lead">
+                            The network below is colored according to artists’ average happiness score. The node gradient is based on the sentiment where blue colors show artists with a tendency to include sadder words in their lyrics while the red ones embrace happier words.                     </p>
                     </div>
                 </div>
                 <div class="row">
                     <img src="./assets/img/networks/network-sentiment-coloring.svg">
                 </div>
+
+                <!-- Sentiment Historgram-->
+                <div class="row mt-4">
+                    <div class="col-10 m-auto">
+                        <p class="lead">
+                            The network displays a lot of mixed clusters and somewhat “neutral” artists. To further understand why so many artists are “neutral”, let’s look at the distribution of the songs’ average happiness score. 
+                        </p>
+                    </div>
+                </div>
                 <div class="row">
                     <img src="./assets/img/graphs/happiness_score_songs.svg"/>
                 </div>
+
+                <!-- Sentiment table-->
                 <div data-include="sentiment"></div>
             </div>
         </section>
@@ -362,58 +404,66 @@
             });
 
 
-            const songHappy = 'Comment 1';
-            const songSad = 'Comment 2';
+            const songHappy = 
+            '<p>Here we can see songs by some music icons like Stevie Wonder, Elvis Presley, and Whitney Houston.</p>\
+            <p> For example, the song “I will always love you” includes some of the highest-ranking happy words like happiness, love, and joy.</p>\
+            <i>“I hope life treats you kind <br/> And I hope you have all you\'ve dreamed of <br/>And I wish you joy and happiness <br/>But above all this I wish you love” </i>';
+            const songSad = 
+            `<p>Here we can see a mix of different songs by various artists.</p>
+            <p>For example the song “Cocaine” by Eric Clapton includes a lot of sad words with a minority of happy words like bad, kick and cocaine.</p>
+            <i>“If you got bad news <br>
+            You wanna kick them blues <br>
+            Cocaine”</i>`;
             const artistsHappy = 'Comment 3';
             const artistsSad = 'Comment 4';
             const genresHappy = 'Comment 5';
             const genresSad = 'Comment 6';
-
+            var dp = new DOMParser();
             
             $(document).on('click', '#nav-song-tab', () => {
                 
                 if ($('#nav-song-happy-tab').hasClass('active')) {
-                    $('#tableComment').text(songHappy)
+                    $('#tableComment').html(songHappy);
                 } else {
-                    $('#tableComment').text(songSad)
+                    $('#tableComment').html(songSad)
                 }
             });
 
             $(document).on('click', '#nav-artists-tab', () => {
                 
                 if ($('#nav-artists-happy-tab').hasClass('active')) {
-                    $('#tableComment').text(artistsHappy)
+                    $('#tableComment').html(artistsHappy)
                 } else {
-                    $('#tableComment').text(artistsSad)
+                    $('#tableComment').html(artistsSad)
                 }
             });
 
             $(document).on('click', '#nav-genre-tab', () => {
                 
                 if ($('#nav-genre-happy-tab').hasClass('active')) {
-                    $('#tableComment').text(genresHappy)
+                    $('#tableComment').html(genresHappy)
                 } else {
-                    $('#tableComment').text(genresSad)
+                    $('#tableComment').html(genresSad)
                 }
             });
 
             $(document).on('click', '#nav-song-happy-tab', () => {
-                $('#tableComment').text(songHappy)
+                $('#tableComment').html(songHappy)
             });
             $(document).on('click', '#nav-song-sad-tab', () => {
-                $('#tableComment').text(songSad)
+                $('#tableComment').html(songSad)
             });
             $(document).on('click', '#nav-artists-happy-tab', () => {
-                $('#tableComment').text(artistsHappy)
+                $('#tableComment').html(artistsHappy)
             });
             $(document).on('click', '#nav-artists-sad-tab', () => {
-                $('#tableComment').text(artistsSad)
+                $('#tableComment').html(artistsSad)
             });
             $(document).on('click', '#nav-genre-happy-tab', () => {
-                $('#tableComment').text(genresHappy)
+                $('#tableComment').html(genresHappy)
             });
             $(document).on('click', '#nav-genre-sad-tab', () => {
-                $('#tableComment').text(genresSad)
+                $('#tableComment').html(genresSad)
             });
         </script>
     </body>
