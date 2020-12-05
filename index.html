@@ -241,6 +241,50 @@
                     </div>
                 </div>
 
+
+                <!-- KDE section -->
+                <div class="row">
+                    <div class="col-10 m-auto">
+                        <h3 class="text-uppercase text-secondary mt-4">
+                            Dissimilarities between the 10 most common genres
+                        </h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-10 m-auto">
+                        <p class="lead">
+                            Themes between genres can be very dissimilar. How does lyrical content differ across genres? 
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-10 m-auto">
+                        <p class="lead">
+                            The KDE plot below displays the relative sentiment distribution within each genre, by considering the average happiness score of every artist belonging to the genre. The area for each genre is equal to 1. 
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-10 m-auto">
+                        <p class="lead">
+                            Play around with the plot and compare the sentiments between your favorite genres!
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-10 m-auto">
+                        <div data-include="kde-plot"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-10 m-auto">
+                        <p class="lead">
+                            As you might have observed from the plot, contemporary country and underground hip hop are very different. Furthermore, hip hop has more artists with a lower sentiment than rap.
+                        </p>
+                    </div>
+                </div>
+
+
                 <div class="row">
                     <div class="col-10 m-auto">
                         <h3 class="text-uppercase text-secondary mt-4">Top 10 Lists</h3>
@@ -249,7 +293,7 @@
                 <div class="row">
                     <div class="col-10 m-auto">
                         <p class="lead">
-                            The table includes the 10 happiest/saddest songs, artist and genres. Feel free to skim through it and check whether your favorite songs, artists or genres express intense emotions.
+                            The table includes the 10 happiest/saddest songs, artist and genres. Feel free to skim through it and check whether your favorite songs, artists or genres express intense emotions. You can also check out our observations on the right.
                         </p>
                     </div>
                 </div>
@@ -266,14 +310,14 @@
                 <div class="row">
                     <div class="col-10 m-auto">
                         <p class="lead">
-                            As seen in the table above, many of the happiest songs and artists are old-timers that were famous back in the 50s, 60s, or 70s. The music industry is constantly changing and evolving, and therefore, it is interesting to see the changes in music sentiments over the years. 
+                            As seen in the table above, many of the happiest songs and artists are old-timers that were famous back in the 50s, 60s or 70s. The music industry is constantly changing and evolving, and therefore, it is interesting to see the changes in music sentiments over the years. 
                         </p>    
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-10 m-auto">
                         <p class="lead">
-                            Have a look at the figure below. The blue dots represent the songs, from the year they were released and their average happiness score. The red line shows the yearly average happiness score.
+                            Have a look at the figures below. On the left, the blue dots represent the songs, from the year they were released and their average happiness score. The red line shows the yearly average happiness score. The graph on the right shows the average happiness score of each decade, with a downward trend over the decades.
                         </p>    
                     </div>
                 </div>
@@ -281,11 +325,34 @@
                     <div class="col-6 m-auto">
                         <img src="./assets/img/graphs/sentiment-over-time.svg">
                     </div>
+                    <div class="col-6 m-auto">
+                        <img src="./assets/img/graphs/happiness_decade.svg">
+                    </div>
                 </div>
                 <div class="row">
                     <div class="col-10 m-auto">
                         <p class="lead">
-                            Notice that the song lyrics have developed over the years. Nowadays, there are more extremes, that is, more songs contain very happy lyrics or very sad lyrics. Back in the day, the lyrics sentiment was more similar, with less noticeable positive or negative themes. 
+                            The graphs show a slight downward trend. Two explanations come to mind, one being that music has slowly become sadder over time. The other explanation is one of sample bias. Because we chose artists based on popularity and number of followers today it might just be that people who listen to older musicians like to listen to happier musicians rather than the sadder ones.                         </p>    
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-10 m-auto">
+                        <p class="lead">
+                            At first glance, it seems that the newer music exists more in both extremes than the older music, but looking at the standard deviation we see that this is likely not the case. We may simply be seeing more extreme songs because we have more new songs in our dataset than old ones.                         </p>    
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-10 m-auto">
+                        <p class="lead">
+                            The two possible conclusions remain. 
+                            <ul>
+                                <li class="lead">
+                                    On average, it’s the happier songs that live on
+                                </li>
+                                <li class="lead">
+                                    Music has seen a slow and steady decline to sadder and sadder lyrics. 
+                                </li>
+                            </ul>
                         </p>    
                     </div>
                 </div>
@@ -484,7 +551,7 @@
             `;
             const genresHappy = `
             <p>The happiest genres seem logical. The music belonging to the genres are usually “feel good” songs or songs that people like to dance to, for example, <b>electro house, dance-pop,</b> and <b>contemporary country</b>.</p>
-            <p>The happiest genre is <b>contemporary Christian music</b> which might not come as a surprise since many of those songs contain high rated happy words such as lord, Jesus, and holy.</p>
+            <p>The happiest genre is <b>contemporary Christian music (ccm)</b> which might not come as a surprise since many of those songs contain high rated happy words such as lord, Jesus, and holy.</p>
             <p><b>Funk</b> is a danceable form of music with a mixture of soul, jazz, and rhythm and blues. The songs often have a good vibe.</p>
             `;
             const genresSad = `
