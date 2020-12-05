@@ -33,7 +33,7 @@
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#introduction">Introduction <i class="fas fa-align-justify"></i></a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#network">Network <i class="fas fa-project-diagram"></i></a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#sentiment">Sentiment <i class="fas fa-laugh"></i></a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#genres-themes">Genres & Themes <i class="fas fa-chart-bar"></i></a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#genres-themes">Text Analysis <i class="fas fa-chart-bar"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -121,11 +121,24 @@
                     </div>
                 </div>
                 <!-- Network screenshot and link-->
-                <div class="row">
+                <div class="row mt-4">
                     <div class="m-auto col-12">
                         <a href="./network/index.html">
                             <img src="./assets/img/networks/network.svg" />
                         </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="m-auto col-8">
+                        <p class="lead">
+                            Let’s take a closer look at the largest connected component, this time we will generate a network with a different approach. We’ll spatialize the network using the Force Atlas 2 layout, with strong gravity so that we can view all the nodes at the same time. The nodes are colored according to their community. Due to the layout, adjacent communities are more related than communities that are far apart. Additionally, the internal position of every node within a community represents how related it is to the surrounding communities. For example, Queen and Elvis Presley are in the same community. Queen is closest to the Guns N’ Roses-AC/DC community, while The Beatles are closest to the Ella Fitzgerald-Miles Davis community. The different positions in the layout are confirmed by the artists’ time periods alone. 
+                        </p>
+                    </div>
+                </div>
+                <!-- Network gcc screenshot -->
+                <div class="row mt-4">
+                    <div class="m-auto col-12">
+                        <img src="./assets/img/networks/network-gcc.svg" />
                     </div>
                 </div>
             </div> 
@@ -146,6 +159,12 @@
                     <div class="col-lg-4 ml-auto"><p class="lead">By using data from Spotify and Genius, we want to try to visualize a network of musicians from all types of music, find hidden structure in the music industry and try to gain new insights into the different genres as well as develop a tool to discover and explore new music.</p></div>
                     <div class="col-lg-4 mr-auto"><p class="lead">We want to see if we can relate the network structure to genre, lyrical sentiment and other characteristics in the data. We may find common lyrical themes in certain genres or unexpected connections between seemingly dissimilar types of music.</p></div>
                 </div>
+                <div class="row">
+                    <img src="./assets/img/networks/network-sentiment-coloring.svg">
+                </div>
+                <div class="row">
+                    <img src="./assets/img/graphs/happiness_score_songs.svg"/>
+                </div>
                 <div data-include="sentiment"></div>
             </div>
         </section>
@@ -153,7 +172,7 @@
         <section class="page-section mb-0" id="genres-themes">
             <div class="container">
                 <!-- genres-themes Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase text-secondary">Genres & Themes</h2>
+                <h2 class="page-section-heading text-center text-uppercase text-secondary">Text Analysis</h2>
                 <!-- Icon Divider-->
                 <div class="divider-custom "><!--divider-light-->
                     <div class="divider-custom-line"></div>
@@ -164,6 +183,15 @@
                 <div class="row">
                     <div class="col-lg-4 ml-auto"><p class="lead">Then we’ll perform a sentimental analysis. We’ll compare sentiment based on artists, genres and communities in the network. </p></div>
                     <div class="col-lg-4 mr-auto"><p class="lead">Then we’ll perform a sentimental analysis. We’ll compare sentiment based on artists, genres and communities in the network. </p></div>
+                </div>
+
+                <div class="row">
+                    <div class="col-6 m-auto">
+                        <img src="./assets/img/wordclouds/CCM.png">
+                    </div>
+                    <div class="col-6 m-auto">
+                        <img src="./assets/img/wordclouds/Underground hip hop.png">
+                    </div>
                 </div>
 
                 <!-- genres-themes section wordclouds-->

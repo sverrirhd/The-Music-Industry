@@ -9,7 +9,7 @@
   },
   "text": {
     "more": "",
-    "intro": "A prototype for the SGI interaction implementation",
+    "intro": "Interactive version of our music network for.",
     "title": "The Music Industry"
   },
   "legend": {
@@ -33,7 +33,7 @@
       "defaultLabelBGColor": "#ddd",
       "activeFontStyle": "bold",
       "defaultLabelColor": "#000",
-      "labelThreshold": 3,
+      "labelThreshold": 4,
       "defaultLabelHoverColor": "#fff",
       "fontStyle": "bold",
       "hoverFontStyle": "bold",
