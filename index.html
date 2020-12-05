@@ -67,19 +67,29 @@
                     <div class="divider-custom-icon"><i class="fab fa-spotify"></i></div>
                     <div class="divider-custom-line"></div>
                 </div>
-                <!-- About Section Content-->
+                <!-- Introduciton Section Content-->
                 <div class="row">
-                    <div class="col-lg-4 ml-auto"><p class="lead">By using data from Spotify and Genius, we want to try to visualize a network of musicians from all types of music, find hidden structure in the music industry and try to gain new insights into the different genres as well as develop a tool to discover and explore new music.</p></div>
-                    <div class="col-lg-4 mr-auto"><p class="lead">We want to see if we can relate the network structure to genre, lyrical sentiment and other characteristics in the data. We may find common lyrical themes in certain genres or unexpected connections between seemingly dissimilar types of music.</p></div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-8 m-auto">
-                        <p class="lead  mt-4">
-                            You’re welcome to download the datasets we created using the button below and check out our Explainer Notebook, which shows the development process step-by-step.
+                    <div class="col-10 m-auto">
+                        <p class="lead">
+                            Welcome to our project for the course <i>02805 Social graphs and interactions.</i> 
                         </p>
                     </div>
                 </div>
-                <!-- network Section Button-->
+                <div class="row">
+                    <div class="col-10 m-auto">
+                        <p class="lead">
+                            Our objective with this project is to analyze the music industry using data from Spotify and Genius. We want to try to visualize a network of musicians from all types of music, find hidden structure in the music industry, and try to gain new insights into the different genres as well as develop a tool to discover and explore new music. We want to see if we can relate the network structure to genres, lyrical sentiment, and other characteristics in the data. We will look into common lyrical themes in certain genres and see if there are unexpected connections between seemingly dissimilar types of music. 
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-10 m-auto">
+                        <p class="lead">
+                            We gathered the data for the analysis using the web APIs from Spotify and Genius. You’re welcome to download the datasets using the button below and check out our Explainer Notebook, which shows the development process step-by-step.
+                        </p>
+                    </div>
+                </div>
+                <!-- Introduction Section Buttons-->
                 <div class="row mt-4">
                     <div class="text-center m-auto ">
                         <a class="btn btn-xl btn-outline-light bg-spotify" href="./network/index.html">
@@ -128,8 +138,8 @@
                         </a>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="m-auto col-8">
+                <div class="row mt-4">
+                    <div class="m-auto col-10">
                         <p class="lead">
                             Let’s take a closer look at the largest connected component, this time we will generate a network with a different approach. We’ll spatialize the network using the Force Atlas 2 layout, with strong gravity so that we can view all the nodes at the same time. The nodes are colored according to their community. Due to the layout, adjacent communities are more related than communities that are far apart. Additionally, the internal position of every node within a community represents how related it is to the surrounding communities. For example, Queen and Elvis Presley are in the same community. Queen is closest to the Guns N’ Roses-AC/DC community, while The Beatles are closest to the Ella Fitzgerald-Miles Davis community. The different positions in the layout are confirmed by the artists’ time periods alone. 
                         </p>
@@ -154,10 +164,22 @@
                     <div class="divider-custom-icon"><i class="fab fa-spotify"></i></div>
                     <div class="divider-custom-line"></div>
                 </div>
-                <!-- Sentiment Section Content-->
+                <!-- Sentiment intro Section Content-->
                 <div class="row">
-                    <div class="col-lg-4 ml-auto"><p class="lead">By using data from Spotify and Genius, we want to try to visualize a network of musicians from all types of music, find hidden structure in the music industry and try to gain new insights into the different genres as well as develop a tool to discover and explore new music.</p></div>
-                    <div class="col-lg-4 mr-auto"><p class="lead">We want to see if we can relate the network structure to genre, lyrical sentiment and other characteristics in the data. We may find common lyrical themes in certain genres or unexpected connections between seemingly dissimilar types of music.</p></div>
+                    <div class="col-10 m-auto">
+                        <p class="lead">
+                            Artists use their song lyrics to convey their message, feelings, and emotions. Songs are all about making the listeners feel what the artist feels, to enhance the way you experience music.
+                        </p>
+                    </div>
+                    <div class="col-10 m-auto">
+                        <p class="lead">
+                            It is interesting to analyze how emotions are shown in song lyrics and detect which songs and artists convey more positive or negative emotions. Furthermore, explore the genres and detect whether some genres tend to be darker/sadder than others, e.g., is there an apparent difference in happiness between rap and pop?                        </p>
+                    </div>
+                    <div class="col-10 m-auto">
+                        <p class="lead">
+                            The LabMT wordlist is used to classify the tokenized words from 12,000 lyrics by 2,142 artists. The list includes common words and their average happiness score that can be applied to songs, artists, and genres.  
+                        </p>
+                    </div>
                 </div>
                 <div class="row">
                     <img src="./assets/img/networks/network-sentiment-coloring.svg">
@@ -338,6 +360,61 @@
                 });
 
             });
-            </script>
+
+
+            const songHappy = 'Comment 1';
+            const songSad = 'Comment 2';
+            const artistsHappy = 'Comment 3';
+            const artistsSad = 'Comment 4';
+            const genresHappy = 'Comment 5';
+            const genresSad = 'Comment 6';
+
+            
+            $(document).on('click', '#nav-song-tab', () => {
+                
+                if ($('#nav-song-happy-tab').hasClass('active')) {
+                    $('#tableComment').text(songHappy)
+                } else {
+                    $('#tableComment').text(songSad)
+                }
+            });
+
+            $(document).on('click', '#nav-artists-tab', () => {
+                
+                if ($('#nav-artists-happy-tab').hasClass('active')) {
+                    $('#tableComment').text(artistsHappy)
+                } else {
+                    $('#tableComment').text(artistsSad)
+                }
+            });
+
+            $(document).on('click', '#nav-genre-tab', () => {
+                
+                if ($('#nav-genre-happy-tab').hasClass('active')) {
+                    $('#tableComment').text(genresHappy)
+                } else {
+                    $('#tableComment').text(genresSad)
+                }
+            });
+
+            $(document).on('click', '#nav-song-happy-tab', () => {
+                $('#tableComment').text(songHappy)
+            });
+            $(document).on('click', '#nav-song-sad-tab', () => {
+                $('#tableComment').text(songSad)
+            });
+            $(document).on('click', '#nav-artists-happy-tab', () => {
+                $('#tableComment').text(artistsHappy)
+            });
+            $(document).on('click', '#nav-artists-sad-tab', () => {
+                $('#tableComment').text(artistsSad)
+            });
+            $(document).on('click', '#nav-genre-happy-tab', () => {
+                $('#tableComment').text(genresHappy)
+            });
+            $(document).on('click', '#nav-genre-sad-tab', () => {
+                $('#tableComment').text(genresSad)
+            });
+        </script>
     </body>
 </html>
