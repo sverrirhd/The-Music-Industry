@@ -78,7 +78,7 @@
                 <div class="row">
                     <div class="col-10 m-auto">
                         <p class="lead">
-                            Our objective with this project is to analyze the music industry using data from Spotify and Genius. We want to try to visualize a network of musicians from all types of music, find hidden structure in the music industry, and try to gain new insights into the different genres as well as develop a tool to discover and explore new music. We want to see if we can relate the network structure to genres, lyrical sentiment, and other characteristics in the data. We will look into common lyrical themes in certain genres and see if there are unexpected connections between seemingly dissimilar types of music. 
+                            Our objective with this project is to analyze the music industry using data from Spotify and Genius. We want to try to visualize a network of musicians from all types of music, find hidden structure in the music industry, and try to gain new insights into the different genres as well as develop a tool to discover and explore new music. We want to see if we can relate the network structure to genres, lyrical sentiment, see how it has evolved over the years, and other characteristics in the data. We will look into lyrical themes to identify patterns for certain topics and genres.
                         </p>
                     </div>
                 </div>
@@ -121,9 +121,11 @@
                 <div class="row">
                     <div class="col-6 m-auto">
                         <p class="lead">
-                            It turns out, our dataset is rather large. We decided to use a subset of artists for our network that consists of the most popular artists and the most followed artists.<br><br>
+                            The initial network is visualized in the figure on the right.<br><br>
 
-                            In our network, every artist is represented as a node. The edges between them are created using a feature in Spotify called “related artists”, that connects an artist to a set of other artists.<br><br>
+                            The dataset used for the network is rather large. We decided to use a subset of artists that consists of the most popular artists and the most followed artists on Spotify.<br><br>
+
+                            In our network, every artist is represented as a node. The edges between them are created using a feature in Spotify called “related artists”, that connects an artist to a set of other artists which people might also like.<br><br>
                             
                             The total network contains 4,031 nodes and 35,192 edges. 
                         </p>
@@ -175,10 +177,10 @@
                     <div class="col-10 m-auto">
                         <ul class="lead">
                             <li>Ed Sheraan, Ariana Grande and Rihanna are all <strong>pop musicians</strong>.</li>
-                            <li>Drake Migos and Eminem are <strong>rappers</strong>.</li>
+                            <li>Drake, Migos and Eminem are <strong>rappers</strong>.</li>
                             <li>Queen, Guns N’ Roses, the Beatles are <strong>old time rock and rollers</strong>.</li>
                             <li>The Weeknd, Nicki Minaj and Kendrick Lamar are known <strong>hip hop</strong> artists.</li>
-                            <li>Zac Efron & Hugh Jackman have played in <strong>musical movies</strong>.</li>
+                            <li>Zac Efron and Hugh Jackman have played in <strong>musical movies</strong>.</li>
                             <li>Stormzy, KSI and Jake Paul are all <strong>youtubers</strong>.</li>
                         </ul>
                     </div>
@@ -186,14 +188,14 @@
                 <div class="row">
                     <div class="col-10 m-auto">
                         <p class="lead">
-                            To analyze the communities even further, the artists’ nodes in the network are colored by the community they belong to. For each node, you can explore the artist’s name, Spotify’s popularity score, the number of followers and other artists the musician is linked to. The size of each node is determined by the amount of followers the artist has. That way, the largest nodes become the artists that most people are familiar with. The biggest artists are Ed Sheeran, Drake, Eminem, Justin Bieber, Rihanna and Ariana Grande.
+                            To analyze the communities even further, the artists’ nodes in the network are colored by the community they belong to. For each node, you can explore the artist’s <i>name</i>, Spotify’s <i>popularity</i> score, the number of <i>followers</i>, and <i>other artists</i> the musician is linked to. The size of each node is determined by the amount of followers the artist has. That way, the largest nodes become the artists that most people are familiar with. The biggest ones are Ed Sheeran, Drake, Eminem, Justin Bieber, Rihanna and Ariana Grande.
                          </p>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-10 m-auto">
                         <p class="lead">
-                            The communities show trends as many of the artists of the same community belong to the same genre. Several separate networks can be seen on the figure below. The smaller connected components consist of more obscure, diverse genres from all around the world such as Indian Bollywood artists, Afropop, and Japanese rock. The largest connected component contains more mainstream genres like pop, rock, rap, hip hop and more.
+                            The communities show trends as many of the artists of the same community belong to the same genre. Several separate networks can be seen on the figure below. The smaller connected components, bottom right of the figure, consist of more obscure, diverse genres from all around the world such as Indian Bollywood artists, Afropop, and Japanese rock. The largest connected component contains more mainstream genres like pop, rock, rap, hip hop and more.
                          </p>
                     </div>
                 </div>
