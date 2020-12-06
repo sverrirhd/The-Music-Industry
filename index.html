@@ -85,7 +85,7 @@
                 <div class="row">
                     <div class="col-10 m-auto">
                         <p class="lead">
-                            We gathered the data for the analysis using the web APIs from Spotify and Genius. You’re welcome to download the datasets using the button below and check out our Explainer Notebook, which shows the development process step-by-step.
+                            We gathered the data for the analysis using the web APIs from Spotify and Genius <a href="#source-1">[1]</a><a href="#source-1">[2]</a>. You’re welcome to download the datasets using the button below and check out our Explainer Notebook, which shows the development process step-by-step.
                         </p>
                     </div>
                 </div>
@@ -119,22 +119,44 @@
                 </div>
                 <!-- network Section Content-->
                 <div class="row">
-                    <div class="col-10 m-auto">
+                    <div class="col-6 m-auto">
                         <p class="lead">
-                            some text here
+                            It turns out, our dataset is rather large. We decided to use a subset of artists for our network that consists of the most popular artists and the most followed artists.<br><br>
+
+                            In our network, every artist is represented as a node. The edges between them are created using a feature in Spotify called “related artists”, that connects an artist to a set of other artists.<br><br>
+                            
+                            The total network contains 4,031 nodes and 35,192 edges. 
                         </p>
+                    </div>
+                    <div class="m-auto col-6">
+                        <img src="./assets/img/networks/force-atlas.svg" />
                     </div>
                 </div>
                 <div class="row mt-4">
-                    <div class="m-auto col-12">
-                        <img src="./assets/img/networks/force-atlas.svg" />
+                    <div class="col-10 m-auto">
+                        <h3 class="text-uppercase text-secondary mt-4">Community detection</h3>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-10 m-auto">
                         <p class="lead">
-                            some text here
+                            To gain more insights into the music industry network, a community detection is applied by using the Louvain method. The algorithm works in the following way:
                         </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-10 m-auto">
+                        <ol class="lead">
+                            <li>First each node is assigned to its community (i.e. each node is its community). Then for each node, change in modularity is computed by removing the node from its community and moving it into the community of each of its neighbours.</li>
+                            <li>Then every node is placed into the communities in which they ended last time. Then each community is treated as a single node and the connections between the nodes are used in the communities as weighted edges between the new nodes.
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-10 m-auto">
+                        <p class="lead">
+                            Then it starts over using the aggregated community from before as the new network. It results in the following communities:                        </p>
                     </div>
                 </div>
                 <div class="row">
@@ -145,7 +167,40 @@
                 <div class="row">
                     <div class="col-10 m-auto">
                         <p class="lead">
-                            some text here
+                            31 communities are found for the giant connected component of the network. By viewing the bar plot, there is an apparent theme within each community. 
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-10 m-auto">
+                        <ul class="lead">
+                            <li>Ed Sheraan, Ariana Grande and Rihanna are all <b>pop musicians</b>.</li>
+                            <li>Drake Migos and Eminem are <b>rappers</b>.</li>
+                            <li>Queen, Guns N’ Roses, the Beatles are <b>old time rock and rollers</b>.</li>
+                            <li>The Weeknd, Nicki Minaj and Kendrick Lamar are known <b>Hip Hop</b> artists.</li>
+                            <li>Zac Efron & Hugh Jackman have played in <b>musical movies</b>.</li>
+                            <li>Stormzy, KSI and Jake Paul are all <b>youtubers</b>.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-10 m-auto">
+                        <p class="lead">
+                            To analyze the communities even further, the artists’ nodes in the network are colored by the community they belong to. For each node, you can explore the artist’s name, Spotify’s popularity score, the number of followers and other artists the musician is linked to. The size of each node is determined by the amount of followers the artist has. That way, the largest nodes become the artists that most people are familiar with. The biggest artists are Ed Sheeran, Drake, Eminem, Justin Bieber, Rihanna and Ariana Grande.
+                         </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-10 m-auto">
+                        <p class="lead">
+                            The communities show trends as many of the artists of the same community belong to the same genre. Several separate networks can be seen on the figure below. The smaller connected components consist of more obscure, diverse genres from all around the world such as Indian Bollywood artists, Afropop, and Japanese rock. The largest connected component contains more mainstream genres like pop, rock, rap, hip hop and more.
+                         </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-10 m-auto">
+                        <p class="lead">
+                            Feel free to press the <i>“Explore the network”</i> button to find further information on your favorite artists.
                         </p>
                     </div>
                 </div>
@@ -165,20 +220,21 @@
                 </div>
                 <div class="row mt-4">
                     <div class="col-10 m-auto">
+                        <p class="lead">
+                            The pink and orange clusters include a mix of similar genres such as 2010-2020 pop, hip hop, dance pop, electro house, and R&B with artists such as Beyoncé, Miley Cyrus and Calvin Harris. The bright yellow community looks like an emo/punk/rock cluster with artists like Marilyn Manson and Linkin Park. The gold-brown community includes the old-school rock and rollers - Queen, Pink Floyd and the Beatles. Blue is obviously rappers, consisting of Drake, Eminem and Kanye West. The turkish blue community contains latino artists with Shakira as the most popular musician of that cluster.
+                          </p>
+                    </div>
+                </div>
+
+                <div class="row mt-4">
+                    <div class="col-10 m-auto">
                         <h3 class="text-uppercase text-secondary mt-4">Giant connected component</h3>
                     </div>
                 </div>
                 <div class="row mt-6">
                     <div class="m-auto col-10">
                         <p class="lead">
-                            Let’s take a closer look at the largest connected component, this time we will generate a network with a different approach. We’ll spatialize the network using the Force Atlas 2 layout, with strong gravity so that we can view all the nodes at the same time. The nodes are colored according to their community.
-                        </p>
-                    </div>
-                </div>
-                <div class="row mt-6">
-                    <div class="m-auto col-10">
-                        <p class="lead">
-                            Due to the layout, adjacent communities are more related than communities that are far apart. Additionally, the internal position of every node within a community represents how related it is to the surrounding communities. For example, Queen and Elvis Presley are in the same community. Queen is closest to the Guns N’ Roses-AC/DC community, while The Beatles are closest to the Ella Fitzgerald-Miles Davis community. The different positions in the layout are confirmed by the artists’ time periods alone. 
+                            Let’s take a closer look at the largest connected component, this time we will generate a network with a different approach. We’ll spatialize the network using the Force Atlas 2 layout, with strong gravity so that we can view all the nodes at the same time. The nodes are colored according to their community. Due to the layout, adjacent communities are more related than communities that are far apart. Additionally, the internal position of every node within a community represents how related it is to the surrounding communities. 
                         </p>
                     </div>
                 </div>
@@ -195,22 +251,51 @@
                         <img src="./assets/img/networks/network-gcc.svg" />
                     </div>
                 </div>
+                <div class="row mt-4">
+                    <div class="m-auto col-10">
+                        <p class="lead">
+                            From the figure above, we can see that Queen and Elvis Presley are in the same community. Queen is closest to the Guns N’ Roses-AC/DC community, while Elvis Presley is closest to the Ella Fitzgerald-Miles Davis community. The different positions in the layout are confirmed by the artists’ time periods alone. 
+                        </p>
+                    </div>
+                </div>
 
                 <div class="row mt-4">
                     <div class="col-10 m-auto">
-                        <h3 class="text-uppercase text-secondary mt-4">Important nodes</h3>
+                        <h3 class="text-uppercase text-secondary mt-4">Betweenness centrality</h3>
                     </div>
                 </div>
-                <div class="row mt-6">
+                
+                <div class="row">
                     <div class="m-auto col-10">
                         <p class="lead">
-                            text here
+                            Betweenness centrality measures the number of times a node lies on the shortest path between two other nodes. Therefore, nodes with high betweenness play a vital role when it comes to connecting the whole network. Without them, disruption might occur in links between nodes, as they dominate the shortest paths between the nodes.  
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="m-auto col-10">
+                        <p class="lead">
+                            Now the node size is changed according to the betweenness centrality to identify which artists are most important when it comes to connecting all the artists in the network. The nodes that become the biggest in the network have the highest betweenness centrality, and therefore, influence the flow within the artist network.
                         </p>
                     </div>
                 </div>
                 <div class="row mt-4">
                     <div class="m-auto col-12">
                         <img src="./assets/img/networks/betweenness-centrality.svg" />
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="m-auto col-10">
+                        <p class="lead">
+                            The figure shows that the artist that is most important in acting as a bridge in the network is Pitbull. This could indicate that Pitbull is related to artists from several other communities (various genres). The relation between artists represents what people like. Therefore, if people like Pitbull, they might also like the artists he ties together from different clusters.
+                       </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="m-auto col-10">
+                        <p class="lead">
+                            This shows that Pitbull truly can call himself <b>Mister Worldwide</b>, which, in fact, he does on every occasion.
+                        </p>
                     </div>
                 </div>
             </div> 
@@ -591,6 +676,27 @@
             </div>
         </section>
 
+        <section id="references">
+            <div class="container">
+                <!-- sources section -->
+                <div class="row">
+                    <div class="col-10 m-auto">
+                        <h3 class="text-uppercase text-secondary mt-4">References</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-10 m-auto">
+                        <ul class="lead" style="list-style-type:none;">
+                            <li id="source-1"><a href="https://docs.genius.com/">[1]</a> Genius API. Visited: 01.11.2020</li>
+                            <li id="source-2"><a href="https://developer.spotify.com/documentation/web-api/">[2]</a> Spotify API. Visited: 01.11.2020</li>
+                            <li id="source-3"><a href="https://genius.com/Whitney-houston-i-will-always-love-you-lyrics">[3]</a> “I will always love you”. Whitney Houston. Visited: 04.12.2020</li>
+                            <li id="source-4"><a href="https://genius.com/Eric-clapton-cocaine-lyrics">[4]</a> “Cocaine”. Eric Clapton. 04.12.2020</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Footer-->
         <footer class="bg-primary text-center text-white">
             <div class="container">
@@ -646,13 +752,13 @@
             const songHappy = 
             '<p>Here we can see songs by some music icons like <b>Stevie Wonder</b>, <b>Elvis Presley</b>, and <b>Whitney Houston</b>.</p>\
             <p> For example, the song “I will always love you” includes some of the highest-ranking happy words like happiness, love, and joy.</p>\
-            <i>“I hope life treats you kind <br/> And I hope you have all you\'ve dreamed of <br/>And I wish you joy and happiness <br/>But above all this I wish you love” </i>';
+            <i>“I hope life treats you kind <br/> And I hope you have all you\'ve dreamed of <br/>And I wish you joy and happiness <br/>But above all this I wish you love” </i> <a href="#source-3">[3]</a>';
             const songSad = 
             `<p>Here we can see a mix of different songs by various artists.</p>
             <p>For example the song “Cocaine” by <b>Eric Clapton</b> includes a lot of sad words with a minority of happy words like bad, kick and cocaine.</p>
             <i>“If you got bad news <br>
             You wanna kick them blues <br>
-            Cocaine”</i>`;
+            Cocaine”</i> <a href="#source-4">[4]</a>`;
             const artistsHappy = `
             <p>The happiest artists are a mixture of old-timers like <b>Neil Diamond, Carpenters</b> & <b>George Benson</b> and contemporary Christian music singers such as <b>Chris Tomlin</b> & <b>Hillsong Worship</b>. </p>
             <p>The happiest artist, <b>AOA</b>, is a South Korean k-pop band. The English lyrics to their songs are shown translated on Genius.</p>
