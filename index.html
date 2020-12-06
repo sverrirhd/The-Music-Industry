@@ -85,10 +85,11 @@
                 <div class="row">
                     <div class="col-10 m-auto">
                         <p class="lead">
-                            We gathered the data for the analysis using the web APIs from Spotify and Genius <a href="#source-1">[1]</a><a href="#source-1">[2]</a>. You’re welcome to download the datasets using the button below and check out our Explainer Notebook, which shows the development process step-by-step.
+                            We gathered the data for the analysis using the web APIs from Spotify and Genius <a href="#source-1">[1]</a><a href="#source-1">[2]</a>. You’re welcome to download the datasets using the button below and check out our Explainer Notebook, which shows the development process step-by-step. In addition, there is a brief description of the datasets below.
                         </p>
                     </div>
                 </div>
+
                 <!-- Introduction Section Buttons-->
                 <div class="row mt-4">
                     <div class="text-center m-auto ">
@@ -100,6 +101,75 @@
                             <i class="fas fa-link"></i>
                             Explainer Notebook
                         </a>
+                    </div>
+                </div>
+                <!-- datasets description-->
+
+                <div class="row mt-4">
+                    <div class="col-3 justify-content-start">
+                        <p>
+                            <strong>Artist dataset (CSV) - 5.6MB:</strong><br>
+                            Description:<br>
+                            List of ~100k artists scraped from spotify using the ‘related artists’ Spotify API.<br>
+                            Most important variables:
+                        </p>
+                        <ul>
+                            <li>Spotify artist ID</li>
+                            <li>Artist name</li>
+                            <li>Followers</li>
+                            <li>Popularity score</li>
+                        </ul>                        
+                    </div>
+                    <div class="col-3 justify-content-start">
+                        <p>
+                            <strong>Edges (CSV) - 44MB:</strong><br>
+                            Description:<br>
+                            List of network edges created using the ‘related artists’ Spotify API. The ‘from’ variable is the artist whose page points to the ‘to’ artists page.<br>
+                            Variables:
+                        </p>
+                        <ul>
+                            <li>
+                                Artist ID (from)
+                            </li>
+                            <li>
+                                Artist ID (to)                        
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-3 justify-content-start">
+                        <p>
+                            <strong>Genres (JSON) - 6MB:</strong><br>
+                            A .json file which uses artist IDs as keys and a list of genres associated with that artist. Gathered using the spotify ‘related artists’ API.<br>
+                            Keys: Artist ID<br>
+                            Values: List of genres
+                        </p>
+                    </div>
+                    <div class="col-3 justify-content-start">
+                        <p>
+                            <strong>Lyrics (CSV) - 137MB:</strong>
+                            Description:<br>
+                            A table with all the songs we got from the ‘search’ and ‘song’ APIs from Genius. The lyrics were scraped with the ‘lyricsgenius’ python package.                         Most important variables:
+                        </p>
+                        <ul>
+                            <li>
+                                Artist name
+                            </li>
+                            <li>
+                                Song name
+                            </li>
+                            <li>
+                                Song Lyrics
+                            </li>
+                            <li>
+                                Release date
+                            </li>
+                            <li>
+                                Lyrics (raw)
+                            </li>
+                            <li>
+                                Lyrics (tokenized and lemmatized)                        
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
