@@ -104,6 +104,11 @@
                     </div>
                 </div>
                 <!-- datasets description-->
+                <div class="row mt-4">
+                    <div class="col-10 m-auto">
+                        <h3 class="text-uppercase text-secondary mt-4">Overview of the datasets</h3>
+                    </div>
+                </div>
 
                 <div class="row mt-4">
                     <div class="col-3 justify-content-start">
@@ -177,7 +182,7 @@
 
 
         <!-- network Section-->
-        <section class="page-section mb-0" id="network">
+        <section class="page-section mb-0" id="network" style="margin-top: -4rem">
             <div class="container">
                 <!-- network Section Heading-->
                 <h2 class="page-section-heading text-center text-uppercase text-secondary">Network</h2>
@@ -191,13 +196,11 @@
                 <div class="row">
                     <div class="col-6 m-auto">
                         <p class="lead">
-                            The initial network is visualized in the figure on the right.<br><br>
+                            First let’s see what our data looks like. We have a dataset of 4031 of the most popular and most followed artists on Spotify.<br><br>
 
-                            The dataset used for the network is rather large. We decided to use a subset of artists that consists of the most popular artists and the most followed artists on Spotify.<br><br>
-
-                            In our network, every artist is represented as a node. The edges between them are created using a feature in Spotify called “related artists”, that connects an artist to a set of other artists which people might also like.<br><br>
+                            To visualize this data we’ll use a network graph where each artist in our subset is represented by a node and each edge between artists is created using a feature in Spotify called “related artists”. This connects an artist to a set of other artists which people might also like.<br><br>
                             
-                            The total network contains 4,031 nodes and 35,192 edges. 
+                            The image on the right contains exactly 4,031 nodes and 35,192 edges.  
                         </p>
                     </div>
                     <div class="m-auto col-6">
